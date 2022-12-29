@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {useState} from "react";
+import TxtArea from "./components/TxtArea/TxtArea";
+import ErrMess from "./components/ErrMess/ErrMess";
+import TranslatedTxt from "./components/TranslatedTxt/TranslatedTxt";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
+    const [currTranslate,setCurrTranslate] = useState('')
+    const [errMess,setErrMess] = useState('')
+    const [storageWords,setStorageWords] = useLocalStorage("storageWords",[])
+    const updateCurrTranslate = (val) =>{
+        setCurrTranslate(val)
+    }
+    const updateErrMess = (val) => {
+        setErrMess(val)
+    }
+    const setStorageWord = (title,context,translate) =>{
+        setStorageWords([...storageWords,{
+            "title" : `${title}: ${context}`,
+            "translate": translate
+        }])
+        console.log('ok');
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="engDict-to-html-convert">
+          <div className="writing-space_shade"></div>
+          <div className="writing-space_shadow"></div>
+          <TxtArea currTrans={currTranslate} setWord={setStorageWord} updCurrTrans={updateCurrTranslate} updErr={updateErrMess}/>
+          {currTranslate && <TranslatedTxt text={currTranslate}/>}
+          {errMess && <ErrMess mess={errMess}/>}
+      </div>
   );
 }
 

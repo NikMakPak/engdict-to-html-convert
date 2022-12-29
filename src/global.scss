@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.font {
+  color: #dedddd;
+  font-size: 20px;
+  font-family: "Anonymous Pro", monospace;
+  letter-spacing: 0.08em;
+}
+.engDict-to-html-convert {
+  background: #252020;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
