@@ -10,6 +10,14 @@ function App() {
     const [currTranslate,setCurrTranslate] = useState('')
     const [errMess,setErrMess] = useState('')
     const [storageWords,setStorageWords] = useLocalStorage("storageWords",[])
+    const [isAlertShown,setIsAlertShown] = useLocalStorage("isAlertShown",false)
+
+    const showLocalStorDelAlert = () =>{
+        if (isAlertShown)
+            return
+        alert("При каждом скачивании html слова будут вносится в новый html")
+        setIsAlertShown(true)
+    }
     const updateCurrTranslate = (val) =>{
         setCurrTranslate(val)
     }
@@ -25,7 +33,7 @@ function App() {
     }
   return (
       <div className="engDict-to-html-convert">
-          <Btn storage={storageWords} />
+          <Btn storage={storageWords} alert={showLocalStorDelAlert} />
           <div className="writing-space_shade"></div>
           <div className="writing-space_shadow"></div>
           <TxtArea currTrans={currTranslate} setWord={setStorageWord} updCurrTrans={updateCurrTranslate} updErr={updateErrMess}/>

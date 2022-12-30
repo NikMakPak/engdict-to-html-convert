@@ -8,7 +8,11 @@
   z-index: 1;
   outline: none;
   padding: 20px;
-  margin: 20px;
+  @media screen and (max-width: 570px)  {
+    width: 306px;
+    height: 68px;
+    font-size: 16px;
+  }
 }
 
 .writing-space_shadow {
@@ -17,7 +21,9 @@
   height: 90px;
   border: 10px solid #1b3e40;
   border-radius: 5px;
-  margin: 20px;
+  @media screen and (max-width: 570px)  {
+    width: 324px;
+  }
 }
 .btnHtml{
   position: absolute;
@@ -31,6 +37,9 @@
   &:hover,&:disabled{
     opacity: .4;
   }
+  @media screen and (max-width: 570px)  {
+    transform: translateX(120px);
+  }
 }
 
 .writing-space_shade {
@@ -39,7 +48,9 @@
   height: 110px;
   border: 10px solid #212B2C;
   border-radius: 15px;
-  margin: 20px;
+  @media screen and (max-width: 570px)  {
+    width: 344px;
+  }
 }
 .translated{
   position: absolute;
@@ -55,5 +66,9 @@
   span{
     font-style: italic;
     text-transform: lowercase;
+  }
+  @media screen and (max-width: 570px)  {
+    font-size: 24px;
+    width: 322px;
   }
 }
