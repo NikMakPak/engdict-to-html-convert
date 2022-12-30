@@ -17,7 +17,7 @@ function App() {
     const showLocalStorDelAlert = () =>{
         if (isAlertShown)
             return
-        alert("При следующем скачивании html слова будут вносится в новый html")
+        alert("При скачивании html новые слова будут вносится в новый html файл")
         setIsAlertShown(true)
     }
     const updateCurrTranslate = (val) =>{
