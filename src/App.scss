@@ -19,6 +19,19 @@
   border-radius: 5px;
   margin: 20px;
 }
+.btnHtml{
+  position: absolute;
+  transform: translateX(200px);
+  margin-bottom: 190px;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  &:hover,&:disabled{
+    opacity: .4;
+  }
+}
 
 .writing-space_shade {
   position: absolute;

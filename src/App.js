@@ -4,6 +4,7 @@ import TxtArea from "./components/TxtArea/TxtArea";
 import ErrMess from "./components/ErrMess/ErrMess";
 import TranslatedTxt from "./components/TranslatedTxt/TranslatedTxt";
 import useLocalStorage from "./hooks/useLocalStorage";
+import Btn from "./components/Btn/Btn";
 
 function App() {
     const [currTranslate,setCurrTranslate] = useState('')
@@ -24,6 +25,7 @@ function App() {
     }
   return (
       <div className="engDict-to-html-convert">
+          <Btn storage={storageWords} />
           <div className="writing-space_shade"></div>
           <div className="writing-space_shadow"></div>
           <TxtArea currTrans={currTranslate} setWord={setStorageWord} updCurrTrans={updateCurrTranslate} updErr={updateErrMess}/>
