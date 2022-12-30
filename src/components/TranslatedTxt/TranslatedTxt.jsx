@@ -2,8 +2,8 @@ import React from 'react';
 
 const TranslatedTxt = ({text}) => {
     return (
-        <div className={"translated font"}>
-            > <span>{text}</span>
+        <div className={"message translated font"}>
+            <span>></span> {text}
         </div>
     );
 };

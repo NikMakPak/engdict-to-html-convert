@@ -25,6 +25,21 @@
     width: 324px;
   }
 }
+.save-bg{
+  position: absolute;
+  margin-bottom: 168px;
+  width: 80px;
+  height: 39px;
+  background: #212B2C;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  &.hidden{
+    opacity: 0;
+  }
+}
 .btnHtml{
   position: absolute;
   transform: translateX(200px);
@@ -52,23 +67,28 @@
     width: 344px;
   }
 }
-.translated{
+.message{
   position: absolute;
   margin-top: 403px;
   width: 460px;
   min-height: 300px;
-  font-size: 30px;
   line-height: 44px;
   letter-spacing: 0.08em;
-  color: #618C8F;
-  font-weight: 700;
   word-break: break-all;
-  span{
-    font-style: italic;
-    text-transform: lowercase;
-  }
+  font-style: italic;
+  text-transform: lowercase;
   @media screen and (max-width: 570px)  {
     font-size: 24px;
     width: 322px;
   }
+  span{
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+.translated{
+  color: #618C8F;
+}
+.error{
+  color: #840B0B;
 }

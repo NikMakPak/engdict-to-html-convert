@@ -1,7 +1,7 @@
 import React from 'react';
 import { saveAs } from 'file-saver';
 
-const Btn = ({storage,alert}) => {
+const Btn = ({storage,clearStorage,alert}) => {
     function getListItem({title,translate}) {
         return `<ul class="toggle"><li><details><summary>${title}</summary><p class="">${translate}</p></details></li></ul>` //TODO: future - add english voiceover words here. source ?
     }
@@ -14,6 +14,7 @@ const Btn = ({storage,alert}) => {
         alert()
         let blob = new Blob([htmlData], {type: "text/plain;charset=utf-8"});
         saveAs(blob, `${storage[0].title.substring(0, 5)}-etc.html`);
+        clearStorage()
         //TODO: future - make html generation on the server on the node js and send the file to telegram. source: 1 - https://www.youtube.com/watch?v=UaoRx_EmD70&ab_channel=UlbiTV  |  2 - https://www.youtube.com/watch?v=RviYQrNdDok&t=1221s&ab_channel=AVISTV
     }
 
