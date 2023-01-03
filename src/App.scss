@@ -8,6 +8,7 @@
   z-index: 1;
   outline: none;
   padding: 20px;
+  color: #dedddd;
   @media screen and (max-width: 570px)  {
     width: 306px;
     height: 68px;
@@ -43,7 +44,7 @@
 .btnHtml{
   position: absolute;
   transform: translateX(200px);
-  margin-bottom: 190px;
+  margin-bottom: 250px;
   background: transparent;
   outline: none;
   border: none;
@@ -69,12 +70,12 @@
 }
 .message{
   position: absolute;
-  margin-top: 403px;
+  margin-top: 200px;
   width: 460px;
-  min-height: 300px;
+  min-height: 85px;
   line-height: 44px;
   letter-spacing: 0.08em;
-  word-break: break-all;
+  overflow-wrap: break-word;
   font-style: italic;
   text-transform: lowercase;
   @media screen and (max-width: 570px)  {
@@ -86,8 +87,13 @@
     font-weight: 700;
   }
 }
-.translated{
-  color: #618C8F;
+.words-count{
+  transform: translateX(200px);
+  margin-bottom: 135px;
+  margin-top: 0;
+  min-width: 92px;
+  min-height: 60px;
+  width: 0;
 }
 .error{
   color: #840B0B;

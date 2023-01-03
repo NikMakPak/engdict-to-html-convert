@@ -36,15 +36,16 @@ function App() {
             setIsIconShown(false)
         }, 500);
     }
-    const setStorageWord = (title,context,translate) =>{
+    const setStorageWord = ( isShortMode,title,context,translate) =>{
         setStorageWords([...storageWords,{
-            "title" : `${title}: ${context}`,
+            "title" : `${isShortMode ? '*'+title : title+': '+context}`,
             "translate": translate
         }])
         showIcon();
     }
   return (
       <div className="engDict-to-html-convert">
+          <p className={"message font words-count"}>Слов: {storageWords.length}</p>
           <Btn storage={storageWords} clearStorage={clearStorageWords} alert={showLocalStorDelAlert} />
           <SaveDone isShown={isIconShown}/>
           <div className="writing-space_shade"></div>
