@@ -94,6 +94,11 @@
   min-width: 92px;
   min-height: 60px;
   width: 0;
+  @media screen and (max-width: 570px)  {
+    transform: translateX(137px);
+    min-width: 109px;
+    font-size: 18px;
+  }
 }
 .error{
   color: #840B0B;
