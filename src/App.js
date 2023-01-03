@@ -44,7 +44,7 @@ function App() {
         showIcon();
     }
   return (
-      <div className="engDict-to-html-convert">
+      <>
           <p className={"message font words-count"}>Слов: {storageWords.length}</p>
           <Btn storage={storageWords} clearStorage={clearStorageWords} alert={showLocalStorDelAlert} />
           <SaveDone isShown={isIconShown}/>
@@ -53,7 +53,7 @@ function App() {
           <TxtArea currTrans={currTranslate} setWord={setStorageWord} updCurrTrans={updateCurrTranslate} updErr={updateErrMess}/>
           {currTranslate && <TranslatedTxt text={currTranslate}/>}
           {errMess && <ErrMess mess={errMess}/>}
-      </div>
+      </>
   );
 }
 

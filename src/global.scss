@@ -5,7 +5,6 @@
   padding: 0;
 }
 .font {
-
   font-size: 20px;
   font-family: "Anonymous Pro", monospace;
   letter-spacing: 0.08em;
@@ -17,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   position: relative;
+  overflow: hidden;
+  min-height: 335px;
 }
