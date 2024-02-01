@@ -11,7 +11,8 @@
 1. HTML, SCSS
 2. React
 3. Axios
-4. JSON и DOM
+4. file-saver
+5. JSON и DOM
 - _Демонстрация_:
   (http://paposov.beget.tech/)
 
